@@ -1,30 +1,10 @@
 #Represents employee data as a class
 class Employee
-  def initialize(input_first_name, input_last_name, input_salary, input_active)
-    @first_name = input_first_name
-    @last_name = input_last_name
-    @salary = input_salary
-    @active = input_active
-  end
-
-  #getter method returns first_name:
-  def first_name
-    @first_name
-  end
-
-  #getter method returns last_name:
-  def last_name
-    @last_name
-  end
-
-  #getter method returns active_status:
-  def active
-    @active
-  end
-
-  #setter method writes to active_status:
-  def active=(input_active)
-    @active = input_active
+  def initialize(input_options)
+    @first_name = input_options(:first_name)
+    @last_name = input_options(:last_name)
+    @salary = input_options(:salary)
+    @active = input_options(:active)
   end
 
   def print_info
@@ -36,8 +16,8 @@ class Employee
   end
 end
 
-employee1 = Employee.new("Majora", "Carter", 80000, true)
-employee2 = Employee.new("Danilo", "Campos", 70000, true)
+employee1 = Employee.new(first_name: "Majora", last_name: "Carter", salary: 80000, active: true)
+employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 70000, active: true)
 employee1.print_info
 employee2.print_info
 employee1.give_annual_raise

@@ -22,8 +22,13 @@ class Employee
     @active
   end
 
+  #setter method writes to active_status:
+  def active=(input_active)
+    @active = input_active
+  end
+
   def print_info
-    puts "#{@first_name} #{@last_name} makes #{@salary} dollars a year."
+    puts "#{first_name} #{last_name} makes #{@salary} dollars a year."
   end
 
   def give_annual_raise
@@ -39,4 +44,6 @@ employee1.give_annual_raise
 employee1.print_info
 p employee1.first_name
 p employee1.last_name
-p employee1.active
+p employee2.active
+employee2.active = false
+p employee2.active

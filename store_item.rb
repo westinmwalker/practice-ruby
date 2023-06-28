@@ -1,7 +1,6 @@
 #Shop items represented as a class:
 class Shop_Item
-  attr_reader :item_color, :item_price, :item_size, :item_type
-  attr_writer :item_color, :item_price, :item_size, :item_type
+  attr_accessor :item_color, :item_price, :item_size, :item_type
 
   def initialize(item_type, item_color, item_size, item_price)
     @item_type = item_type

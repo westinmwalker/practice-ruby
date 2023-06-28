@@ -1,5 +1,5 @@
 #Shop items represented as a class:
-class Shop_Item
+class Item
   attr_accessor :item_color, :item_price, :item_size, :item_type
 
   def initialize(item_type, item_color, item_size, item_price)
@@ -14,9 +14,9 @@ class Shop_Item
   end
 end
 
-item1 = Shop_Item.new("shirt", "red", "large", 15)
-item2 = Shop_Item.new("jeans", "blue", "skinny", 40)
-item3 = Shop_Item.new("shoes", "white", "12 extra wide", 35)
+item1 = Item.new("shirt", "red", "large", 15)
+item2 = Item.new("jeans", "blue", "skinny", 40)
+item3 = Item.new("shoes", "white", "12 extra wide", 35)
 item1.print_info
 item2.print_info
 item3.print_info

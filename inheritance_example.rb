@@ -1,4 +1,4 @@
-class Vehicle
+module Driveable
   def initialize
     @speed = 0
     @direction = "north"
@@ -17,7 +17,9 @@ class Vehicle
   end
 end
 
-class Car < Vehicle
+class Car
+  include Driveable
+
   def initialize
     super
     @fuel = "Unleaded"
@@ -30,7 +32,9 @@ class Car < Vehicle
   end
 end
 
-class Bike < Vehicle
+class Bike
+  include Driveable
+
   def initialize
     super
     @type = "City"
@@ -42,11 +46,13 @@ class Bike < Vehicle
   end
 end
 
-car1 = Vehicle.new()
-bike1 = Vehicle.new()
-car1.accelerate
-bike1.accelerate
+car1 = Car.new()
+bike1 = Bike.new()
 car1.honk_horn
 bike1.ring_bell
+p car1
+p bike1
+car1.accelerate
+bike1.accelerate
 p car1
 p bike1

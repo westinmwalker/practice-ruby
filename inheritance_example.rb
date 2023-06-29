@@ -1,4 +1,4 @@
-module Driveable
+module Movable
   def initialize
     @speed = 0
     @direction = "north"
@@ -18,7 +18,7 @@ module Driveable
 end
 
 class Car
-  include Driveable
+  include Movable
 
   def initialize
     super
@@ -33,7 +33,7 @@ class Car
 end
 
 class Bike
-  include Driveable
+  include Movable
 
   def initialize
     super

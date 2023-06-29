@@ -22,7 +22,7 @@ class Car
 
   def initialize
     super
-    @fuel = "Unleaded"
+    @fuel = "unleaded"
     @make = "Ford"
     @model = "Explorer"
   end
@@ -37,7 +37,7 @@ class Bike
 
   def initialize
     super
-    @type = "City"
+    @type = "city"
     @weight = "7kg"
   end
 

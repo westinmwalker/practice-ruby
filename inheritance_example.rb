@@ -46,13 +46,13 @@ class Bike
   end
 end
 
-car1 = Car.new()
-bike1 = Bike.new()
-car1.honk_horn
-bike1.ring_bell
-p car1
-p bike1
-car1.accelerate
-bike1.accelerate
-p car1
-p bike1
+car = Car.new()
+bike = Bike.new()
+car.honk_horn
+bike.ring_bell
+p car
+p bike
+car.accelerate
+bike.accelerate
+p car
+p bike

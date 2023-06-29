@@ -14,7 +14,7 @@ class Employee
   end
 
   def give_annual_raise
-    @salary = 1.05 * @salary
+    @salary = 1.07 * @salary
   end
 end
 
@@ -52,5 +52,10 @@ manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000
 manager.print_info
 manager.send_report
 manager.give_all_raises
+employee1.print_info
+employee2.print_info
+p employee1
+p employee2
 manager.fire_all_employees
-manager.print_info
+p employee1
+p employee2
